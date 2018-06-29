@@ -1,39 +1,22 @@
 var express    = require("express"); // call express
 var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
-// const exphbs     = require("handlebars");
 var app        = express();
 
 
 
 app.set("view engine", "ejs");
-// app.engine("handelbars", exphbs());
 app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
 app.get("/", function(req, res){
-    res.render("theme-blue");
+    res.render("index");
 });
 
-app.get("/red", function(req, res){
-    res.render("theme-red");
-});
 
-app.get("/green", function(req, res){
-    res.render("theme-green");
-});
-
-app.get("/yellow", function(req, res){
-    res.render("theme-yellow");
-});
-
-app.get("/test", function(req, res){
-    res.render("bedankt");
-});
 
 app.post("/send", (req, res) => {
     var name = (req.body.name);
@@ -45,7 +28,7 @@ app.post("/send", (req, res) => {
         <li>Email : ${req.body.email}</li>
         <li>Telefoon : ${req.body.tel}</li>
     </ul>
-    <p>${req.body.bericht}<p>
+    <p>Bericht : ${req.body.bericht}<p>
     `
     
     // create reusable transporter object using the default SMTP transport
@@ -59,7 +42,7 @@ app.post("/send", (req, res) => {
 });
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"3DWD" <mailserver163@gmail.com>', // sender address
+        from: '"www.passiermuziekemmen.nl" <mailserver163@gmail.com>', // sender address
         to: 'niek_losenoord@hotmail.com', // list of receivers
         subject: name + ' Heeft een bericht gestuurd via de website.', // Subject line
         text: '', // plain text body
@@ -77,7 +60,7 @@ app.post("/send", (req, res) => {
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
         
-        res.render("bedankt")
+        res.render("contact-bedankt")
         
     });
 });
@@ -116,5 +99,5 @@ app.post("/send", (req, res) => {
 //     }); });
 
 app.listen(process.env.PORT, process.env.IP, function(){ // tell node to listen & define a port to view app
-    console.log("3D Web Dev server starting...");
+    console.log("Passier server starting...");
 });
