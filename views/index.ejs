@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/x-icon" href="../img/halloween-bats (2).png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> Boo At The Zoo | Oude Dierenpark Emmen</title>
   <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
@@ -17,14 +17,33 @@
 </head>
 <body>
   <section id="home-section" class="background text-center">
-    <div class="dark-overlay">
+  <!--<div class="container-fluid">-->
+    <div class="dark-overlay container-fluid">
       <div class="home-inner">
         <div class="container">
-          <a href="https://www.facebook.com/pg/BooAtTheZoo/">
-            <div class="facebook d-none d-sm-block">
+          <div class="facebook d-none d-lg-block">
+            <div class="facebooklink">
+          <a class="fblink" href="https://www.facebook.com/pg/BooAtTheZoo/">
               Check ons op: 
          <i class="fab fa-facebook-square"></i>
-         </div></a>
+         </div>
+         </div>
+         <div class="facebookmsgr d-none d-lg-block">
+            <div class="facebooklink d-none d-sm-block">
+          <a class="fblink" href="https://www.facebook.com/pg/BooAtTheZoo/">
+              Stuur ons een bericht 
+        <i class="fab fa-facebook-messenger"></i>
+         </div>
+         </div>
+         <div class="tickets d-none d-lg-block">
+            <div class="facebooklink d-none d-sm-block">
+          <a class="fblink" href="https://www.eventree.nl/event/boo-at-the-zoo-2018-batz">
+              Voor tickets: 
+          <i class="fas fa-ticket-alt"></i>
+         </div>
+         </div>
+         
+         </a>
           <div class="row">
             <!--<div class="none d-lg-block">-->
             <!--  <h1 class="display-1"><strong> </strong> <strong></strong></h1>-->
@@ -38,21 +57,24 @@
         </div>
       </div>
     </div>
+    <!--</div>-->
   </section>
   
   <section id="over">
+    <div class="container-fluid p-0">
     <div class="container">
     <p class="par pt-5 ">Hét halloween feest in de oude dierentuin van Emmen waar je door de gehele dierentuin de stuipen op het lijf wordt gejaagd door ongure figuren!</p>
     <div class="row pt-5">
       <div class="col-lg-4">
-        <img src="../img/g1.jpg" class="img-fluid shift" alt="foto"> 
+        <img src="../img/g1.jpg" class="img-fluid shift"  alt="foto"> 
       </div>
        <div class="col-lg-4">
-        <img src="../img/g2.jpg" class="img-fluid shift1" alt="foto"> 
+        <img src="../img/g2.jpg" class="img-fluid shift1"  alt="foto"> 
       </div>
        <div class="col-lg-4">
-        <img src="../img/g3.jpg" class="img-fluid shift2" alt="foto"> 
+        <img src="../img/g3.jpg" class="img-fluid shift2"  alt="foto"> 
       </div>
+    </div>
     </div>
     </div>
   </section>
@@ -186,7 +208,7 @@
           <div class="col-md-4">
             <ul class="list-inline">
               <li class="list-inline-item">
-              <p> <span class="sig"><i class="fas fa-laptop-code"></i> Gemaakt door : <a href="http://www.3dwebdevelopment.com" class="sig">3D Web Development</a></p>
+              <p> <i class="fas fa-laptop-code"></i> <span class="sig1"> Gemaakt door : </span><span class="sig"><a href="http://www.3dwebdevelopment.com" class="sig">3D Web Development</a></p>
               </li>
               <li class="list-inline-item">
                 <a href="#"></a>
@@ -203,5 +225,6 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  </div>
 </body>
 </html>
