@@ -293,6 +293,13 @@ a{
   border:2px solid #fbb03b;
 }
 
+.video{
+  /*box-shadow:0px 40px 80px #892237;*/
+  transform:rotate(-2deg);
+  border:2px solid #fbb03b!important;
+  
+}
+
 .bats{
   position:absolute;
   top:80;

@@ -60,17 +60,31 @@
     </div>
     <!--</div>-->
   </section>
-  
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <section id="over">
     <div class="container-fluid p-0">
     <div class="container">
     <img src="../img/halloween-bats (2).png" class="bats1">
     <p class="par pt-5 ">Hét halloween feest in de oude dierentuin van Emmen waar je door de gehele dierentuin de stuipen op het lijf wordt gejaagd door ongure figuren!</p>
+    <div class="row"> 
+    <!--<div class="col"></div>-->
+    <div class="col-lg-12 pt-5">
+      <iframe class="m-auto d-block video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBooAtTheZoo%2Fvideos%2F2563022823724021%2F&width=500&show_text=false&height=280&appId" width="500" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+    </div>
+    <!--<div class="col"></div>-->
+    </div>
     <div class="row pt-5">
       <div class="col-lg-4">
         <img src="../img/g1.jpg" class="img-fluid shift"  alt="foto"> 
       </div>
-       <div class="col-lg-4">
+       <div class="col">
         <img src="../img/g2.jpg" class="img-fluid shift1"  alt="foto"> 
       </div>
        <div class="col-lg-4">
@@ -228,7 +242,7 @@ function myMap() {
         Wees er snel bij want vorig jaar waren de tickets uitverkocht!
       </p>
       <a href="https://www.eventree.nl/event/boo-at-the-zoo-2018-batz" class="btn-lg btn-warning">Tickets kopen</a>
-      <p class="par py-5 mt-3 text-left adres">
+      <p class="par py-5 mt-3 text-left adres d-none d-lg-block">
         Hoofdstraat 18<br> 7811 EP <br>Emmen<br>
         Tijd:<br>
         18:30
