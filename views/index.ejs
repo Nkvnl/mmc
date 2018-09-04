@@ -51,6 +51,7 @@
             <div class="col-lg-12 text-center text-white">
               <img src="../img/halloween-bats (1).png" alt="" class="logo pt-5">
               <p class="logo-subheading">Boo <br> at the <br> Zoo</p>
+              <a href="https://www.eventree.nl/event/boo-at-the-zoo-2018-batz" class="btn btn-lg btn-outline-warning my-4">Tickets kopen</a>
             </div>
           </a>
           </div>
@@ -63,6 +64,7 @@
   <section id="over">
     <div class="container-fluid p-0">
     <div class="container">
+    <img src="../img/halloween-bats (2).png" class="bats1">
     <p class="par pt-5 ">Hét halloween feest in de oude dierentuin van Emmen waar je door de gehele dierentuin de stuipen op het lijf wordt gejaagd door ongure figuren!</p>
     <div class="row pt-5">
       <div class="col-lg-4">
@@ -170,11 +172,74 @@
   
   <section id="tickets">
     <h1 class="header-tickets text-center">
-        tickets
+        Informatie
       </h1>
-      <p class="par">
+      <div class="container text-center px-5">
+        <img src="../img/halloween-bats (1).png" class="bats">
+      <div class="row datum pb-5">
+        <div class="col-lg-4">
+          <p id="dag" class="m-0">
+            Zondag
+          </p>
+          <p id="datum">
+            <span id="nr">28</span> Oktober 2018
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <p id="dag" class="m-0">
+            Maandag
+          </p>
+          <p id="datum">
+            <span id="nr">29</span> Oktober 2018
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <p id="dag" class="m-0">
+            Dinsdag
+          </p>
+          <p id="datum">
+            <span id="nr">30</span> Oktober 2018
+          </p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="map" class="m-auto mt-5" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(52.78451455,6.89582385);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "Boo at the Zoo 2018"
+  });
+  infowindow.open(map,marker);
+}
+</script>
+          </div>
+          <div class="col-lg-6 ">
+             <p class="par py-5 ">
         Tickets zijn verkrijgbaar via <a href="https://www.eventree.nl/event/boo-at-the-zoo-2018-batz">Eventree</a><br>
         Wees er snel bij want vorig jaar waren de tickets uitverkocht!
+      </p>
+      <a href="https://www.eventree.nl/event/boo-at-the-zoo-2018-batz" class="btn-lg btn-warning">Tickets kopen</a>
+      <p class="par py-5 mt-3 text-left adres">
+        Hoofdstraat 18<br> 7811 EP <br>Emmen<br>
+        Tijd:<br>
+        18:30
+      </p>
+          </div>
+        </div>
+       
+
+        </div>
+      <p class="par py-5">
+        
       </p>
   </section>
   <section id="b4footer">
@@ -222,6 +287,8 @@
   
   <!-- Load Facebook SDK for JavaScript -->
   
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLGMo0sQvfr6BgQZTclIEx8s3Ovw0SzI&callback=myMap"></script>  
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
