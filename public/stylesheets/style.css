@@ -98,6 +98,7 @@ a{
   top:0;
   left:0;
   z-index:1000;
+  transition:1s;
 }
 .fblink{
   z-index:100;
@@ -112,6 +113,7 @@ a{
   text-transform:uppercase;
   font-family: 'Creepster', cursive;
   text-shadow:3px 3px 0px #892237;
+  transition:1s;
 }
 
 .facebookmsgr{
@@ -123,12 +125,14 @@ a{
   text-transform:uppercase;
   font-family: 'Creepster', cursive;
   text-shadow:3px 3px 0px #892237;  
+  transition:1s;
 }
 
 .fa-facebook-square{
   color:#fbb03b;
   font-size:200%;
   text-shadow:3px 3px 0px #892237;
+  transition:.5s;
 }
 
 .fa-facebook-square:hover{
@@ -139,6 +143,7 @@ a{
   color:#fbb03b;
   font-size:200%;
   text-shadow:3px 3px 0px #892237;
+  transition:.5s;
 }
 
 .fa-facebook-messenger:hover{
@@ -160,6 +165,7 @@ a{
   color:#fbb03b;
   font-size:200%;
   text-shadow:3px 3px 0px #892237;
+  transition:1s;
 }
 
 .fa-ticket-alt:hover{
