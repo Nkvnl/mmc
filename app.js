@@ -12,6 +12,10 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
+app.get('/robots.txt', function(req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
 
 app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
     console.log("Passier server starting...");
