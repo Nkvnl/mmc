@@ -46,7 +46,7 @@ a{
 }
 @media only screen and (max-width: 768px) {
 .dark-overlay{
-   background:  url("../img/h1-mob.jpg")!important;
+   background:  url("../img/h1-mob.jpeg")!important;
      background-repeat: no-repeat!important; 
     background-size:cover!important;  
     background-position: center!important;
