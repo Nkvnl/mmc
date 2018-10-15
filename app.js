@@ -52,11 +52,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/15-wetenschappelijl-bewezen-voordelen-meditatie", function(req, res) {
-    res.render("20");
-});
-
-app.get("/15-wetenschappelijl-bewezen-voordelen-meditatie", function(req, res) {
-    res.render("20");
+    res.render("15");
 });
 
 app.get("/luisteren-naar-de-wereld", function(req, res) {
