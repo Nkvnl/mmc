@@ -1,14 +1,32 @@
 var express = require("express"); // call express
 var app = express();
 const compression = require('compression');
-var sm = require('sitemap');
+var robots = require('express-robots-txt');
+var sitemap = require('express-sitemap');
 
 app.use(compression());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
+app.use(robots({ UserAgent: '*', Disallow: '' }))
 
+app.get('*', function(req, res, next) {
+    if (req.headers['x-forwarded-proto'] != 'https')
+        res.redirect('https://www.meditatie.co' + req.url)
+    else
+        next() /* Continue to other routes if we're not redirecting */
+})
 
+sitemap({
+    map: {
+        '/': ['get'],
+    },
+    route: {
+        '/': {
+
+        },
+    },
+}).XMLtoFile();
 
 // var app = express(),
 //     sitemap = sm.createSitemap({
