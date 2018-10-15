@@ -22,7 +22,7 @@ sitemap({
         '/': ['get'],
     },
     route: {
-        '/': {
+        '/15-wetenschappelijl-bewezen-voordelen-meditatie': {
 
         },
     },
