@@ -117,6 +117,63 @@ app.get("/stress-verminderen-meditatie", function(req, res) {
     res.render("stress");
 });
 
+app.get("/privacy", function(req, res) {
+    res.render("privacy");
+});
+
+app.get("/contact", function(req, res) {
+    res.render("contact");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+app.get("/", function(req, res) {
+    res.render("");
+});
+
+
+
+
+
+
 // app.get('/robots.txt', function(req, res) {
 //     res.type('text/plain');
 //     res.send("User-agent: *\nDisallow: /");
