@@ -113,8 +113,8 @@ app.get("/alan-watts", function(req, res) {
     res.render("alanwatts");
 });
 
-app.get("", function(req, res) {
-    res.render("20");
+app.get("/stress-verminderen-meditatie", function(req, res) {
+    res.render("stress");
 });
 
 // app.get('/robots.txt', function(req, res) {
