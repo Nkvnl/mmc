@@ -20,33 +20,63 @@ app.get('*', function(req, res, next) {
 sitemap({
     map: {
         '/': ['get'],
+        '/15-wetenschappelijl-bewezen-voordelen-meditatie': ['get'],
+        '/alan-watts': ['get'],
+        '/metta-loving-kindness': ['get'],
+        '/zen-zazen': ['get'],
+        '/vipassana': ['get'],
+        '/geleide-meditatie': ['get'],
+        '/mantra-meditatie': ['get'],
+        '/soorten-meditaties': ['get'],
+        '/luisteren-naar-de-wereld': ['get'],
+        '/vol-van-vreugde': ['get'],
+        '/mindful-met-vipassan': ['get'],
+        '/geleide-meditatie-lichaam-ruimte-bewustzijn': ['get'],
+        '/1-uurs-meditatie-goenka': ['get'],
+        '/geleide-mindfulness-meditatie-kabat-zinn': ['get'],
+        '/geleide-meditaties': ['get'],
+        '/sri-mooji': ['get'],
+        '/sadhguru': ['get'],
+        '/thich-nhat-hanh': ['get'],
+        '/goenka': ['get'],
+        '/leraren': ['get'],
+        '/stress-verminderen-meditatie': ['get'],
+        '/burnout-helpen-meditatie': ['get'],
+        '/mindfulness': ['get'],
+        '/hatha-yoga': ['get'],
+        '/over-chakras': ['get'],
+        '/blog': ['get'],
     },
     route: {
-        '/15-wetenschappelijl-bewezen-voordelen-meditatie': {
-
-        },
+        '/': {},
+        '/15-wetenschappelijl-bewezen-voordelen-meditatie': {},
+        '/alan-watts': {},
+        '/metta-loving-kindness': {},
+        '/zen-zazen': {},
+        '/vipassana': {},
+        '/geleide-meditatie': {},
+        '/mantra-meditatie': {},
+        '/soorten-meditaties': {},
+        '/luisteren-naar-de-wereld': {},
+        '/vol-van-vreugde': {},
+        '/mindful-met-vipassan': {},
+        '/geleide-meditatie-lichaam-ruimte-bewustzijn': {},
+        '/1-uurs-meditatie-goenka': {},
+        '/geleide-mindfulness-meditatie-kabat-zinn': {},
+        '/geleide-meditaties': {},
+        '/sri-mooji': {},
+        '/sadhguru': {},
+        '/thich-nhat-hanh': {},
+        '/goenka': {},
+        '/leraren': {},
+        '/stress-verminderen-meditatie': {},
+        '/burnout-helpen-meditatie': {},
+        '/mindfulness': {},
+        '/hatha-yoga': {},
+        '/over-chakras': {},
+        '/blog': {},
     },
 }).XMLtoFile();
-
-// var app = express(),
-//     sitemap = sm.createSitemap({
-//         hostname: 'http://www.boo-at-the-zoo.nl',
-//         cacheTime: 600000, // 600 sec - cache purge period
-//         urls: [
-//             { url: '/', changefreq: 'daily', priority: 0.3 },
-
-//         ]
-//     });
-
-// app.get('/sitemap.xml', function(req, res) {
-//     sitemap.toXML(function(err, xml) {
-//         if (err) {
-//             return res.status(500).end();
-//         }
-//         res.header('Content-Type', 'application/xml');
-//         res.send(xml);
-//     });
-// });
 app.get("/", function(req, res) {
     res.render("index");
 });
