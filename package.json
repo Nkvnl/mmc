@@ -9,7 +9,7 @@
   "author": "niek",
   "license": "ISC",
   "dependencies": {
-    "animate.css": "^3.6.1",
+    "animate.css": "^3.7.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "compression": "^1.7.3",

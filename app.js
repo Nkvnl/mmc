@@ -33,10 +33,50 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
+app.get("/15-wetenschappelijl-bewezen-voordelen-meditatie", function(req, res) {
+    res.render("20");
+});
+
+app.get("/15-wetenschappelijl-bewezen-voordelen-meditatie", function(req, res) {
+    res.render("20");
+});
+
+app.get("/luisteren-naar-de-wereld", function(req, res) {
+    res.render("luisteren");
+});
+
+app.get("/mindful-met-vipassana", function(req, res) {
+    res.render("harris");
+});
+
+app.get("/1-uurs-meditatie-goenka", function(req, res) {
+    res.render("goenka");
+});
+
+app.get("/geleide-mindfulness-meditatie-kabat-zinn", function(req, res) {
+    res.render("kabatzinn");
+});
+
+app.get("/geleide-meditatie-lichaam-ruimte-bewustzijn", function(req, res) {
+    res.render("mingyur");
+});
+
+app.get("/vol-van-vreugde", function(req, res) {
+    res.render("volvanvreugde");
+});
+
+app.get("/alan-watts", function(req, res) {
+    res.render("alanwatts");
+});
+
+app.get("", function(req, res) {
+    res.render("20");
+});
+
 // app.get('/robots.txt', function(req, res) {
-            //     res.type('text/plain');
-            //     res.send("User-agent: *\nDisallow: /");
-            // });
+//     res.type('text/plain');
+//     res.send("User-agent: *\nDisallow: /");
+// });
 
 app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
     console.log("Passier server starting...");
