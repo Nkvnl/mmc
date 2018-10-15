@@ -18,6 +18,7 @@
     "express": "^4.16.4",
     "express-robots": "^0.1.6",
     "express-robots-txt": "^0.4.0",
+    "express-sitemap": "^1.8.0",
     "express-validator": "^5.2.0",
     "fontawesome": "^4.7.2",
     "handlebars": "^4.0.11",
