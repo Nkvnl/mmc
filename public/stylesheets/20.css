@@ -344,6 +344,10 @@ html {
   background:white;
 }
 
+#wrapper h2{
+  color:white!important;
+}
+
 button:focus {outline:0 !important;}
 
 .left-controls{

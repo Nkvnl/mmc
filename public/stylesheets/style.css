@@ -62,9 +62,8 @@ span{
   z-index:1;
 }
 
-h1{
+h1 ,h2{
     font-family: 'Montserrat', sans-serif!important;
-    color:black;
 }
 
 
@@ -75,7 +74,6 @@ p{
 }
 a{
   color:white!important;
-  text-decoration:underline;
 }
 
 .navbar{
@@ -360,6 +358,14 @@ html {
   position:relative;
   overflow-y:hidden;
   background:white;
+}
+
+#wrapper h2{
+  color:white;
+}
+
+#main h2{
+  color:white;
 }
 
 button:focus {outline:0 !important;}
