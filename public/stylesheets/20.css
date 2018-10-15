@@ -4,9 +4,9 @@ body{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden!important; 
+    overflow-x: hidden!important;
+  
 }
-
 ._1 {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
@@ -68,20 +68,19 @@ h1{
 }
 
 
-
 p{
     font-family: 'Montserrat', sans-serif!important;
     font-size:14px;
 }
 a{
   color:white;
-  text-decoration:underline;
+  /*text-decoration:underline;*/
 }
 
 .navbar{
   z-index:100;
   position:absolute!important;
-  top:0;
+  top:0!important;
   background:rgba(255,255,255,0)!important;
   /*box-shadow:0px 20px 50px rgba(0,0,0,0.2);*/
   color:white!important;
@@ -220,6 +219,7 @@ clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 
 #blog{
   background:white;
+  width:95vw;
 }
 
 #blog .fa-envelope-open{
@@ -345,7 +345,12 @@ html {
 }
 
 #wrapper h2{
-  color:white!important;
+  color:white;
+}
+
+.h2{
+  color:black;
+  font-family: 'Raleway', cursive;
 }
 
 button:focus {outline:0 !important;}
@@ -618,9 +623,13 @@ footer{
   background-position:center;
 }
 
+footer .fab, .fas{
+  color:white!important;
+}
+
 .fab, .fas{
-  color:white;
-  font-size:24px;
+  color:#88BCD2;
+  font-size:36px;
 }
 
 footer a{
@@ -632,6 +641,12 @@ footer hr{
 }
 
 /*BLOGTEMP*/
+
+span{
+  color:#88BCD2;
+  font-weight:bold;
+  font-size:48px;
+}
 #text{
   border-bottom:1px dotted rgba(0,0,0,0.2);
 }
@@ -655,6 +670,10 @@ footer hr{
   border:1px solid white;
 }
 
+#list a{
+  color:#88BCD2!important;
+}
+
 #list{
   border-right:1px dotted rgba(0,0,0,.2);
 }
@@ -674,7 +693,7 @@ footer hr{
   /*top:0;*/
   z-index:-1;
   height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("img/r8.jpeg");
+  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("../img/r8.jpeg");
   background-size:cover;
   background-position:center ;
     -webkit-box-shadow: 0 0 1px 3px #000 inset;
