@@ -7,6 +7,14 @@ body{
     overflow-x: hidden!important; 
 }
 
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
 ._1 {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
@@ -378,7 +386,7 @@ button:focus {outline:0 !important;}
   width:4%;
   height:1000px;
   z-index:40;
-  background:#fff;
+  background:rgba(255,255,255,0);
   opacity:1;
   cursor:pointer;
   text-align:center;
@@ -405,14 +413,18 @@ button:focus {outline:0 !important;}
   line-height:1;
   font-variant:normal;
   text-transform:none;
-  font-size:2.5vw;
+  font-size:3.5vw;
   transition:transform .1s ease-in-out 0s;
   transition-property: transform;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  color:blue;
-  opacity:.1;
+  color:#88BCD2;
+  padding:20px;
+  opacity:1;
+  z-index:100000!important;
+  background:rgba(77,115,154,0.6);
+  box-shadow:0px 20px 40px rgba(0,0,0,0.5);
 }
 
 
@@ -422,8 +434,8 @@ button:focus {outline:0 !important;}
   right:0;
   width:4%;
   height:1000px;
+  background:rgba(255,255,255,0);
   z-index:40;
-  background:#fff;
   opacity:1;
   cursor:pointer;
   text-align:center;
@@ -434,11 +446,9 @@ button:focus {outline:0 !important;}
   display: moz box;
   display:ms flexbox;
   display:flex;
-  color:#fff;
 }
 
-.fa-chevron-right-extra
-{
+.fa-chevron-right-extra{
   align-self:center;
   position:relative;
   height:auto;
@@ -449,14 +459,18 @@ button:focus {outline:0 !important;}
   line-height:1;
   font-variant:normal;
   text-transform:none;
-  font-size:2.5vw;
+  font-size:3.5vw;
   transition:transform .1s ease-out 0s;
   transition-property: transform;
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
   transition-delay: 0s;
-  color:blue;
-  opacity:.1;
+  color:#88BCD2;
+  padding:20px;
+  opacity:1;
+  z-index:100000!important;
+  background:rgba(77,115,154,0.6);
+  box-shadow:0px 20px 40px rgba(0,0,0,0.5);
 }
 
 .title{
@@ -488,7 +502,7 @@ padding:50px 0 50px 0;
   box-shadow:0px 40px 60px rgba(0,0,0,.4)!important;
 }
 
-#content{
+#content1,#content2,#content3,#content{
   position:relative;
   
 }
@@ -553,7 +567,7 @@ color:#fff;
   visibility:visible;
   transition: all .5s ease-in-out;
   transform: scale(1.1); 
-  z-index:100;
+  z-index:1;
   position:relative;
   transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
   transition-duration:400ms;

@@ -125,12 +125,12 @@ app.get("/contact", function(req, res) {
     res.render("contact");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/sri-mooji", function(req, res) {
+    res.render("over-mooji");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/goenka", function(req, res) {
+    res.render("goenka");
 });
 
 app.get("/", function(req, res) {
