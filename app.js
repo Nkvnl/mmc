@@ -137,7 +137,7 @@ app.get("/begin", function(req, res) {
     res.render("begin");
 });
 
-app.get("/terug-in-je-lichaam-mindfulness", function(req, res) {
+app.get("/mindfulness", function(req, res) {
     res.render("mindfulness");
 });
 
