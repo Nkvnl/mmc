@@ -133,8 +133,8 @@ app.get("/goenka", function(req, res) {
     res.render("goenka");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/begin", function(req, res) {
+    res.render("begin");
 });
 
 app.get("/", function(req, res) {
