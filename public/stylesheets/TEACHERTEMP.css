@@ -73,9 +73,8 @@ p{
     font-family: 'Montserrat', sans-serif!important;
     font-size:14px;
 }
-a{
+.navbar a{
   color:white;
-  text-decoration:underline;
 }
 
 .navbar{
@@ -377,7 +376,7 @@ button:focus {outline:0 !important;}
   top:-250px;
   transform-origin: 55% 50%;
   font-style:normal;
-  font-weight:400;
+  font-weight:900;
   line-height:1;
   font-variant:normal;
   text-transform:none;
@@ -423,7 +422,7 @@ button:focus {outline:0 !important;}
   top:-250px;
  transform-origin: 55% 50%;
   font-style:normal;
-  font-weight:400;
+  font-weight:900;
   line-height:1;
   font-variant:normal;
   text-transform:none;
@@ -642,6 +641,7 @@ footer hr{
     font-family: 'Raleway', cursive;
     font-size:20px;    
     margin-bottom:10px!important;
+    color:#88bcd2!important;
 }
 #text {
     font-family: 'Raleway', cursive;
@@ -654,6 +654,19 @@ footer hr{
 
 #main-blog hr{
   border:1px solid white;
+}
+
+#Breadcrumb ul {
+  list-style-type:none!important;
+}
+
+#Breadcrumb li a{
+  color:black!important;
+}
+
+#list a{
+    color:#88bcd2!important;
+  text-decoration:none;
 }
 
 #list{
@@ -684,11 +697,15 @@ box-shadow: 0 0 5px 5px rgba(0,0,0,.1) inset;
 }
 
 #main-blog .box{
-  color:white;
+  color:white!important;
   font-family: 'Montserrat', sans-serif;
   position:absolute;
   left:10%;
   top:30%;
+}
+
+.box h1{
+  color:white!important;
 }
 
 #list h5{

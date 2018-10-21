@@ -80,8 +80,16 @@ p{
     font-family: 'Montserrat', sans-serif!important;
     font-size:14px;
 }
-a{
+.navbar a{
   color:white!important;
+}
+
+#Breadcrumb ul {
+  list-style-type:none!important;
+}
+
+#Breadcrumb li a{
+  color:black!important;
 }
 
 .navbar{
@@ -409,7 +417,7 @@ button:focus {outline:0 !important;}
   top:-250px;
   transform-origin: 55% 50%;
   font-style:normal;
-  font-weight:400;
+  font-weight:900;
   line-height:1;
   font-variant:normal;
   text-transform:none;
@@ -455,7 +463,7 @@ button:focus {outline:0 !important;}
   top:-250px;
  transform-origin: 55% 50%;
   font-style:normal;
-  font-weight:400;
+  font-weight:900;
   line-height:1;
   font-variant:normal;
   text-transform:none;
@@ -657,6 +665,10 @@ footer{
 footer hr{
   border:1px solid white;
   width:80%;
+}
+
+footer a{
+  color:white;
 }
 
 /*BLOGTEMP*/
