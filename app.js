@@ -17,6 +17,13 @@ app.get('*', function(req, res, next) {
         next() /* Continue to other routes if we're not redirecting */
 })
 
+app.use(function(req, res, next) {
+    if (req.url.match(/^\/(css|js|img|font)\/.+/)) {
+        res.setHeader('Cache-Control', 'public, max-age=3600'); // cache header
+    }
+    next();
+});
+
 sitemap({
     map: {
         '/': ['get'],

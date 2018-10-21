@@ -602,8 +602,14 @@ color:#fff;
 
 
 @media only screen and (max-width: 600px) {
+  .left-controls{
+    display:none;
+  } 
+  .right-controls{
+    display:none;
+  }
   .module-section{
-    height:70vh!important;
+    height:100%!important;
   }
   #main{
     height:70vh!important;
