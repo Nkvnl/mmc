@@ -148,12 +148,12 @@ app.get("/mindfulness", function(req, res) {
     res.render("mindfulness");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/burnout-helpen-meditatie", function(req, res) {
+    res.render("burnout");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/emoties-laten-gaan", function(req, res) {
+    res.render("emoties");
 });
 
 app.get("/", function(req, res) {

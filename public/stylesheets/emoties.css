@@ -1,0 +1,73 @@
+@import url("imports/carousel.css");
+@import url("imports/footer.css");
+@import url("imports/blog.css");
+@import url("imports/nav.css");
+
+body{
+    background: white!important;
+    width: 100%!important;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden!important;
+}
+
+#main-blog{
+  z-index:-1;
+  height:100vh!important;
+  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("https://images.pexels.com/photos/767322/pexels-photo-767322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size:cover;
+  background-position:center ;
+    -webkit-box-shadow: 0 0 1px 3px #000 inset;
+-moz-box-shadow: 0 0 1px 3px #000 inset;
+box-shadow: 0 0 5px 5px rgba(0,0,0,.1) inset;
+}
+
+
+span{
+  /*color:white;*/
+  z-index:1;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif!important;
+    color:black;
+}
+
+
+p{
+    font-family: 'Montserrat', sans-serif!important;
+    font-size:14px;
+}
+
+#main-overlay{
+  background:rgba(0,0,0,0.5);
+-webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+
+
+
+.fa-quote-left{
+ opacity:0.4!important;
+}
+
+.fa-quote-right{
+ opacity:0.4!important;
+}
+
+#blog{
+  background:white;
+  width:95vw;
+}
+
+
+h5{
+  font-weight:lighter;
+}
+
+
+
+
+
+
