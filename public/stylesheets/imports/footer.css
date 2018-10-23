@@ -1,0 +1,24 @@
+
+footer{
+    font-family: 'Raleway', cursive;
+  background-image:linear-gradient(rgba(136, 188, 210,0.7),rgba(136, 188, 210,0.7)), url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size:cover;
+  background-position:center;
+}
+
+footer .fab, .fas{
+  color:white!important;
+}
+
+.fab, .fas{
+  color:#88BCD2;
+  font-size:36px;
+}
+
+footer a{
+  color:white;
+}
+footer hr{
+  border:1px solid white;
+  width:80%;
+}

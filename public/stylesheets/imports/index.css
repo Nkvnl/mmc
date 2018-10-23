@@ -1,0 +1,34 @@
+#main h1{
+  font-size:5vw;
+}
+
+#main hr{
+  margin-right:auto!important;
+  width:100%;
+  border:1px solid white;
+}
+
+.header{
+  letter-spacing:5px;
+  font-size:124px;
+  text-shadow:3px 3px 1px #FBB03B;
+  font-weight:400;
+  color:white;
+  font-family: 'Creepster', cursive;
+  z-index:-1!important;
+}
+
+#geleid{
+    color:white!important;
+  height:auto;
+    background-image:linear-gradient(rgba(136,188,210,.7), rgba(136,188,210,.9)), url("https://images.pexels.com/photos/10979/pexels-photo-10979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+  -webkit-box-shadow: 0 0 1px 3px #000 inset;
+-moz-box-shadow: 0 0 1px 3px #000 inset;
+box-shadow: 0 0 5px 5px rgba(0,0,0,.1) inset;
+}
+
+#geleid h2{
+    font-family: 'Oxygen', cursive;
+
+}

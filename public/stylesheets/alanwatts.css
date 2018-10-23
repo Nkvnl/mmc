@@ -15,7 +15,7 @@ body{
 #main-blog{
   z-index:-1;
   height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("../img/___.jpeg");
+  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('https://i1.wp.com/blog.mindvalley.com/wp-content/uploads/2018/02/Alan-Watts.jpeg?fit=740%2C416&ssl=1');
   background-size:cover;
   background-position:center ;
     -webkit-box-shadow: 0 0 1px 3px #000 inset;
@@ -65,9 +65,6 @@ clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 h5{
   font-weight:lighter;
 }
-
-
-
 
 
 

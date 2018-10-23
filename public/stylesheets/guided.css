@@ -1,0 +1,85 @@
+body{
+    background: black!important;
+    width: 100%!important;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden!important; 
+}
+
+.navbar{
+  z-index:100;
+  position:absolute!important;
+  top:0;
+  background:black!important;
+  /*box-shadow:0px 20px 50px rgba(0,0,0,0.2);*/
+  color:white!important;
+  /*border-bottom:1px solid white;*/
+}
+
+.navbar-toggler{
+  border:0px solid white!important;
+  color:white!important;
+}
+
+.navbar-toggler-icon{
+  color:white!important;
+}
+
+.nav-link{
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+  font-weight:lighter;
+  color:white!important;
+  border-bottom:1px solid white;
+  border-left:1px solid rgba(0,0,0,0);
+  border-right:1px solid rgba(0,0,0,0);
+  border-top:1px solid rgba(0,0,0,0);
+    -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.nav-link:hover{
+  border:1px solid white;
+}
+
+
+.navbar-brand{
+  font-weight:300!important;
+  letter-spacing:3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:24px!important;
+  color:white!important;
+  /*text-transform:uppercase;*/
+}
+
+#Breadcrumb ul {
+  list-style-type:none!important;
+}
+
+#Breadcrumb li{
+  color:white!important;
+   display:inline!important;
+}
+
+
+footer{
+    font-family: 'Raleway', cursive;
+    background:black;
+}
+
+.fab, .fas{
+  color:white;
+  font-size:24px;
+}
+
+footer a{
+  color:white;
+}
+footer hr{
+  border:1px solid white;
+  width:80%;
+}

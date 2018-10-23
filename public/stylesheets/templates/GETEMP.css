@@ -1,5 +1,5 @@
 body{
-    background: white!important;
+    background: black!important;
     width: 100%!important;
     height: 100%;
     margin: 0px;
@@ -73,16 +73,23 @@ p{
     font-family: 'Montserrat', sans-serif!important;
     font-size:14px;
 }
-a{
+.navbar a{
   color:white;
-  text-decoration:underline;
+}
+
+#Breadcrumb ul {
+  list-style-type:none!important;
+}
+
+#Breadcrumb li a{
+  color:white!important;
 }
 
 .navbar{
   z-index:100;
   position:absolute!important;
   top:0;
-  background:rgba(255,255,255,0)!important;
+  background:black!important;
   /*box-shadow:0px 20px 50px rgba(0,0,0,0.2);*/
   color:white!important;
   /*border-bottom:1px solid white;*/
@@ -166,18 +173,16 @@ a{
 #main{
   /*position:absolute;*/
   /*top:0;*/
+  padding-top:65px!important;
   z-index:-1;
   height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('../img/1h.jpg');
   background-size:cover;
-  background-position:center bottom;
-    -webkit-box-shadow: 0 0 1px 3px #000 inset;
--moz-box-shadow: 0 0 1px 3px #000 inset;
-box-shadow: 0 0 5px 5px rgba(0,0,0,.1) inset;
 }
 
 #main-overlay{
-  background:rgba(0,0,0,0.5);
+    -ms-filter: blur 4px!important;
+  filter: blur 4px!important;
+  background:rgba(0, 0, 0,.4);
 -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 }
@@ -317,10 +322,7 @@ body{
   
 }
 
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
+
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -609,9 +611,7 @@ color:#fff;
 
 footer{
     font-family: 'Raleway', cursive;
-  background-image:linear-gradient(rgba(136, 188, 210,0.7),rgba(136, 188, 210,0.7)), url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-size:cover;
-  background-position:center;
+    background:black;
 }
 
 .fab, .fas{
@@ -663,13 +663,9 @@ footer hr{
 }
 
 #main-blog{
-  -ms-filter: blur 4px!important;
-  filter: blur 4px!important;
-  /*position:absolute;*/
-  /*top:0;*/
+  padding-top:65px!important;
   z-index:-1;
   height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('https://images.pexels.com/photos/3768/sky-sunny-clouds-cloudy.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size:cover;
   background-position:center ;
     -webkit-box-shadow: 0 0 1px 3px #000 inset;
