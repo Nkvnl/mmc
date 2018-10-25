@@ -1,0 +1,90 @@
+.navbar a{
+  color:white;
+}
+
+#Breadcrumb ul {
+  list-style-type:none!important;
+}
+
+#Breadcrumb li{
+  color:black!important;
+   display:inline!important;
+}
+
+
+.navbar{
+  z-index:100;
+  position:absolute!important;
+  top:0!important;
+  background-image:linear-gradient(rgba(136, 188, 210,0.7),rgba(136, 188, 210,0.7)), url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size:cover;
+  background-position:top;  /*box-shadow:0px 20px 50px rgba(0,0,0,0.2);*/
+  color:white!important;
+  /*border-bottom:1px solid white;*/
+}
+
+.navbar-toggler{
+  border:0px solid white!important;
+  color:white!important;
+}
+
+.navbar-toggler-icon{
+  color:white!important;
+}
+
+.navbar input{
+  border-radius:0px!important;
+  border:2px solid white!important;
+  background:rgba(0,0,0,0);
+  color:white;
+  font-weight:bolder!important;
+}
+
+.nav-link{
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+  font-weight:lighter;
+  color:white!important;
+  border-bottom:1px solid white;
+  border-left:1px solid rgba(0,0,0,0);
+  border-right:1px solid rgba(0,0,0,0);
+  border-top:1px solid rgba(0,0,0,0);
+    -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.nav-link:hover{
+  border:1px solid white;
+}
+
+
+.btn-outline-custom{
+  border-radius:0px!important;
+  border:2px solid white!important;
+  background:rgba(0,0,0,0);
+  color:white;
+  -webkit-transition:  .5s ease-out;
+  -moz-transition:  .5s ease-out;
+  -ms-transition:  .5s ease-out;
+  -o-transition:  .5s ease-out;
+  transition:.5s ease-out;
+}
+.btn-outline-custom:hover{
+  color:#4d739a!important;
+  background:white;
+  transform:translateY(-5px);
+  box-shadow:0px 20px 40px rgba(0,0,0,.4);
+  transition:.5s ease-in-out;
+}
+
+.navbar-brand{
+  font-weight:300!important;
+  letter-spacing:3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:24px!important;
+  color:white!important;
+  /*text-transform:uppercase;*/
+}

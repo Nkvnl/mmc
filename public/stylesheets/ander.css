@@ -1,0 +1,49 @@
+@import url("imports/carousel.css");
+@import url("imports/footer.css");
+@import url("imports/blog.css");
+@import url("imports/nav-alt.css");
+
+body{
+    background: white!important;
+    width: 100%!important;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden!important;
+    padding-top:150px;
+}
+
+#page{
+  height:100vh;
+}
+
+#subpage{
+  height:100vh;
+}
+
+span{
+  /*color:white;*/
+  z-index:1;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif!important;
+    color:black;
+}
+
+
+p{
+    font-family: 'Montserrat', sans-serif!important;
+    font-size:14px;
+}
+
+
+h5{
+  font-weight:lighter;
+}
+
+
+
+
+
+

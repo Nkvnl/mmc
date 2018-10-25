@@ -50,8 +50,13 @@ sitemap({
         '/stress-verminderen-meditatie': ['get'],
         '/burnout-helpen-meditatie': ['get'],
         '/mindfulness': ['get'],
-        '/hatha-yoga': ['get'],
-        '/over-chakras': ['get'],
+        '/contact': ['get'],
+        '/avg': ['get'],
+        '/emoties-laten-gaan': ['get'],
+        '/dagelijkse-meditatie-routine': ['get'],
+        '/sadghru': ['get'],
+        '/blog': ['get'],
+        '/blog': ['get'],
         '/blog': ['get'],
     },
     route: {
@@ -79,8 +84,14 @@ sitemap({
         '/stress-verminderen-meditatie': {},
         '/burnout-helpen-meditatie': {},
         '/mindfulness': {},
-        '/hatha-yoga': {},
-        '/over-chakras': {},
+        '/over': {},
+        '/avg': {},
+        '/contact': {},
+        '/emoties-laten-gaan': {},
+        '/sadhguru': {},
+        '/dagelijkse-meditatie-routine': {},
+        '/blog': {},
+        '/blog': {},
         '/blog': {},
     },
 }).XMLtoFile();
@@ -164,16 +175,16 @@ app.get("/sadhguru", function(req, res) {
     res.render("sadhguru");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/over", function(req, res) {
+    res.render("over");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/contact", function(req, res) {
+    res.render("contact");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/avg", function(req, res) {
+    res.render("avg");
 });
 
 
