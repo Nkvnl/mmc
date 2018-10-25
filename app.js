@@ -156,12 +156,12 @@ app.get("/emoties-laten-gaan", function(req, res) {
     res.render("emoties");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/dagelijkse-meditatie-routine", function(req, res) {
+    res.render("routine");
 });
 
-app.get("/", function(req, res) {
-    res.render("");
+app.get("/sadhguru", function(req, res) {
+    res.render("sadhguru");
 });
 
 app.get("/", function(req, res) {

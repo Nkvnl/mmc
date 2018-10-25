@@ -15,7 +15,7 @@ body{
 #main-blog{
   z-index:-1;
   height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("../img/l4.jpg");
   background-size:cover;
   background-position:center ;
     -webkit-box-shadow: 0 0 1px 3px #000 inset;
@@ -40,16 +40,6 @@ p{
     font-size:14px;
 }
 
-
-/*.logo{*/
-/*  position:absolute;*/
-/*  top:0%!important;*/
-/*  left:0%!important;*/
-/*  opacity:.4;*/
-/*  height:100%;*/
-/*  width:auto!important;*/
-/*}*/
-
 #main-overlay{
   background:rgba(0,0,0,0.5);
 -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
@@ -72,30 +62,11 @@ clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
 }
 
 
-#blog img{
-  /*box-shadow:0px 20px 40px rgba(0,0,0,.4);*/
-}
-
 h5{
   font-weight:lighter;
 }
 
-.caption-blog{
-  position: absolute;
-  bottom: 8px;
-  left: 16px; 
-  color:white;
-  font-family: 'Raleway', sans-serif!important;
-  
-}
 
-.caption-blog h2{
-  line-height:32px;
-  display: inline;
-background: rgba(0, 180, 219,0.7);  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, rgba(0, 131, 176,0.7), rgba(0, 180, 219,0.7));  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, rgba(0, 131, 176,0.7), rgba(0, 180, 219,0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 
 
