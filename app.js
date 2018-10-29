@@ -54,7 +54,7 @@ sitemap({
         '/avg': ['get'],
         '/emoties-laten-gaan': ['get'],
         '/dagelijkse-meditatie-routine': ['get'],
-        '/sadghru': ['get'],
+        '/sadghuru': ['get'],
         '/blog': ['get'],
         '/blog': ['get'],
         '/blog': ['get'],
@@ -187,6 +187,25 @@ app.get("/avg", function(req, res) {
     res.render("avg");
 });
 
+app.get("/slaap-meditatie", function(req, res) {
+    res.render("slaapv");
+});
+
+app.get("/niet-kunnen-slapen-meditatie", function(req, res) {
+    res.render("slaapb");
+});
+
+app.get("/metta-meditatie", function(req, res) {
+    res.render("metta");
+});
+
+app.get("/vipassana-meditatie", function(req, res) {
+    res.render("vipassana");
+});
+
+app.get("/meditatie-kussen", function(req, res) {
+    res.render("kussen");
+});
 
 
 
