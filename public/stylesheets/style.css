@@ -1,73 +1,74 @@
-@import url('imports/carousel.css');
-@import url('imports/footer.css');
-@import url('imports/index.css');
-@import url('imports/slows.css');
-@import url('imports/nav.css');
+@import url("imports/carousel.css");
+@import url("imports/blog.css");
 
 body{
-    background: white!important;
-    width: 100%!important;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden!important; 
+  background: white!important;
+  width: 100%!important;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden!important; 
 }
 
-span{
-  /*color:white;*/
-  z-index:1;
+h1{
+   font-family: 'Merienda', cursive!important;
 }
 
-h1 ,h2{
-    font-family: 'Montserrat', sans-serif!important;
+.btn{
+   font-family: 'Merienda', cursive!important;
 }
 
-
-
-p{
-    font-family: 'Montserrat', sans-serif!important;
-    font-size:14px;
+h2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:2.5em;
 }
+.date{
+  font-weight:100;
+  
+}
+
+.navbar{
+  box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.navbar-toggler{
+  border:0px solid white;
+}
+
+.navbar i{
+  color:black;
+  font-size:1.5em;
+}
+
+.navbar-brand{
+  font-family: 'Merienda', cursive!important;
+  transform:rotate(-6deg);
+}
+
 #main{
-  /*position:absolute;*/
-  /*top:0;*/
-  z-index:-1;
-  height:100vh!important;
-  background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('../img/1h.jpg');
+  height:70vh;
+  background-image: url("https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position:top;
   background-size:cover;
-  background-position:center bottom;
-    -webkit-box-shadow: 0 0 1px 3px #000 inset;
--moz-box-shadow: 0 0 1px 3px #000 inset;
-box-shadow: 0 0 5px 5px rgba(0,0,0,.1) inset;
+  -webkit-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
 }
 
-#main-overlay{
-  background:rgba(0,0,0,0.2);
--webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+.blog-title{
+    transition:.4s ease-in-out;
+
 }
 
-#main .box{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  position:absolute;
-  left:10%;
-  top:30%;
+.blog-title:hover{
+  color:#88bcd2;
 }
 
-.fa-quote-left{
- opacity:0.4!important;
+._123{
+  height:100vh;
+  
 }
 
-.fa-quote-right{
- opacity:0.4!important;
+#newblog{
 }
-
-
-
-
-h5{
-  font-weight:lighter;
-}
-
 

@@ -1,0 +1,15 @@
+<% include partials/header-blog %>
+<title> Meditatie.co | <%= Blog.title %></title>
+<% include partials/nav-blog %>
+<div class="container-fluid" id="blog-main" style="
+  background:url('<%=Blog.banner%>');
+; background-size:cover;">
+">
+</div>
+<div class="col-md-6 text-center mx-auto pt-5">
+  <h2 class="blog-title"><%=Blog.title%></h2>
+  <h6 class="date"> &mdash; <%=Blog.date%></h6>
+</div>
+<div class="col-md-6 text-center mx-auto pt-5">
+  <p><%=Blog.content%></p>
+</div>

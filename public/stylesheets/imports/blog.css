@@ -1,72 +1,8 @@
-#share-buttons img {
-width: 35px;
-padding: 5px;
-border: 0;
-box-shadow: 0;
-display: inline;
+#blog-main{
+  height:70vh;
+  background:url("https://images.pexels.com/photos/248044/pexels-photo-248044.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-size:cover;
+    -webkit-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
 }
-
-
-span{
-  color:#88BCD2;
-  font-weight:bold;
-  font-size:48px;
-}
-#text{
-  border-bottom:1px dotted rgba(0,0,0,0.2);
-}
-
-#text a{
-    font-family: 'Raleway', cursive;
-    font-size:20px;    
-    margin-bottom:10px!important;
-    color:black!important;
-}
-#text {
-    font-family: 'Raleway', cursive;
-    font-size:20px;  
-}
-#text h1,h2,h3,h4,h5,h6{
-      font-family: 'Raleway', cursive;
-      font-weight:lighter;
-}
-
-#main-blog hr{
-  border:1px solid white;
-}
-
-#list a{
-  color:#88BCD2!important;
-}
-
-#list{
-  border-right:1px dotted rgba(0,0,0,.2);
-}
-
-#list strong{
-  color:#88bcd2;
-}
-
-#list ul li a{
-  color:black!important;
-}
-
-
-#main-blog .box{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  position:absolute;
-  left:10%;
-  top:30%;
-}
-
-#list h5{
-      font-family: 'Raleway', cursive;
-      font-weight:bold;
-}
-
-#list ul li{
-  list-style-type:none;
-  font-family: 'Raleway', cursive;
-}
-
