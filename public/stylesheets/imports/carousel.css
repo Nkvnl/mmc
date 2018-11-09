@@ -11,7 +11,7 @@
 
 .blog-top .fa-angle-left{
   position:absolute;
-  left:10px;
+  left:10px!important;
   line-height:5vh;
 }
 
@@ -48,13 +48,14 @@ a:hover{
 
 #wrapper{
   max-width:100%;
+  /*height:70vh;*/
   padding:50px 75px 50px 45px;
   position:relative;
   overflow-y:hidden;
-  background: #00c6ff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-box-shadow: inset 10px 14px 107px 33px rgba(0,0,0,0.75);
+  background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+-webkit-box-shadow: inset 10px 14px 107px 33px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 10px 14px 107px 33px rgba(0,0,0,0.75);
   box-shadow: inset 10px 14px 107px 33px rgba(0,0,0,0.75);
 }
@@ -66,11 +67,13 @@ a:hover{
 button:focus {outline:0 !important;}
 
 .left-controls{
-  position:relative;
-  left:20px!important;
+  position:absolute;
+  /*top:0;*/
+  left:0px!important;
   width:4%;
-  z-index:40;
+  height:70vh;
   background:rgba(255,255,255,0);
+  z-index:40;
   opacity:1;
   cursor:pointer;
 }
@@ -103,22 +106,14 @@ button:focus {outline:0 !important;}
 
 .right-controls{
   position:absolute;
-  top:0;
-  right:0;
+  /*top:0;*/
+  right:0px!important;
   width:4%;
-  height:1000px;
+  height:70vh;
   background:rgba(255,255,255,0);
   z-index:40;
   opacity:1;
   cursor:pointer;
-  text-align:center;
-  webkit justify content: center;
-  justify-content:center;
-  display: webkit box;
-  display: webkit flex;
-  display: moz box;
-  display:ms flexbox;
-  display:flex;
 }
 
 .fa-chevron-right-extra{
@@ -149,7 +144,14 @@ button:focus {outline:0 !important;}
 
 .module-section{
   max-width: 100%;
-  height:80vh!important;
+  height:90vh!important;
+  overflow: hidden;
+  overflow-x:scroll;
+}
+
+.module-section-geleide{
+  max-width: 100%;
+  height:60vh!important;
   overflow: hidden;
   overflow-x:scroll;
 }
@@ -232,6 +234,23 @@ color:#fff;
   
 }
 
+.card-geleid{
+  border-radius:0px!important;
+  width: 300px;
+  height:50vh;
+  background:#fff;
+  float:left;
+  margin-right:25px;
+  margin-left:25px;
+  margin-bottom:50px;
+  cursor:pointer;
+  transform: scale(1);
+  visibility:visible;
+  border:0px solid blue!important;
+  box-shadow:1px 1px 6px rgba(0,0,0,0.7);
+  
+}
+
 .card:hover{
   cursor:pointer;
   transform: scale(1.05);
@@ -268,10 +287,10 @@ color:#fff;
 
 @media only screen and (max-width: 600px) {
   .module-section{
-    height:50vh!important;
+    height:80vh!important;
   }
   #main{
-    height:70vh!important;
+    height:60vh!important;
     background-position:right;
   }
   .box h1{
@@ -295,7 +314,7 @@ color:#fff;
     height:100%;
   }
     #main{
-    height:70vh!important;
+    height:60vh!important;
     background-position:right;
   }
   .box h1{

@@ -8,12 +8,19 @@ var express = require("express"),
     passport = require("passport"),
     bodyParser = require("body-parser"),
     User = require("./models/user"),
+    Blog = require("./models/blog"),
+    // blogSpotlightSchema = require("./models/blog"),
+    // blogTeachSchema = require("./models/blogteach"),
+    // blogTechSchema = require("./models/blogtech"),
+    // blogGuide = require("./models/blogguide"),
     LocalStrategy = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose");
 var nodemailer = require("nodemailer");
 var path = require('path');
 var methodOverride = require("method-override");
-
+var sanitizeHtml = require('sanitize-html');
+// var seedDB = require("./seeds")
+// seedDB()
 
 mongoose.connect("mongodb://localhost/meditatie");
 app.use(compression());
@@ -35,22 +42,50 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-var blogSchema = new mongoose.Schema({
-    title: String,
-    desc: String,
-    date: String,
-    content: String,
-    img: String,
-});
-var Blog = mongoose.model("Blog", blogSchema);
 
 
 
-//ROUTES
 
-app.get("/index", function(req, res) {
-    // Get all campgrounds from DB
-    console.log(req.user);
+
+
+
+// app.post("/index", function(req, res) {
+//     // get data from form and add to campgrounds array
+//     var titleGuide = req.body.titleGuide;
+//     var seoGuide = req.body.seoGuide;
+//     var descGuide = req.body.descGuide;
+//     var dateGuide = req.body.dateGuide;
+//     var thumbGuide = req.body.thumbGuide;
+//     var thumbdescGuide = req.body.thumbdescGuide;
+//     var bannerdescGuide = req.body.bannerdescGuide;
+//     var bannerGuide = req.body.bannerGuide;
+//     var contentGuide = req.body.contentGuide;
+//     var contentGuide = req.body.contentGuide;
+//     var newBlogGuide = {
+//         titleGuide: titleGuide,
+//         thumbGuide: thumbGuide,
+//         thumbdescGuide: thumbdescGuide,
+//         bannerdescGuide: bannerdescGuide,
+//         bannerGuide: bannerGuide,
+//         seoGuide: seoGuide,
+//         descGuide: descGuide,
+//         dateGuide: dateGuide,
+//         contentGuide: contentGuide,
+//     };
+//     // Create a new campground and save to DB
+//     blogGuide.create(newBlogGuide, function(err, newlyCreated) {
+//         if (err) {
+//             console.log(err);
+//         }
+//         else {
+//             //redirect back to campgrounds page
+//             res.redirect("/");
+//         }
+//     });
+// });
+
+
+app.get("/", function(req, res) {
     Blog.find({}, function(err, blogAll) {
         if (err) {
             console.log(err);
@@ -61,23 +96,181 @@ app.get("/index", function(req, res) {
     });
 });
 
-app.post("/index", function(req, res) {
+app.get("/blogs/home", function(req, res) {
+    Blog.find({}, function(err, blogAll) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("blog", { blogs: blogAll, currentUser: req.user });
+        }
+    });
+});
+
+app.get("/leraren/home", function(req, res) {
+    Blog.find({}, function(err, blogAll) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("teach", { blogs: blogAll, currentUser: req.user });
+        }
+    });
+});
+
+
+app.get("/geleide-meditaties/home", function(req, res) {
+    Blog.find({}, function(err, blogAll) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("guide", { blogs: blogAll, currentUser: req.user });
+        }
+    });
+});
+
+
+app.get("/technieken/home", function(req, res) {
+    Blog.find({}, function(err, blogAll) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("tech", { blogs: blogAll, currentUser: req.user });
+        }
+    });
+});
+
+
+
+app.post("/", function(req, res) {
     // get data from form and add to campgrounds array
     var title = req.body.title;
+    var titleGuide = req.body.titleGuide;
+    var titleSpot = req.body.titleSpot;
+    var titleTeach = req.body.titleTeach;
+    var titleTech = req.body.titleTech;
+    var titleBook = req.body.titleBook;
+    // SEO
+    var seoGuide = req.body.seoGuide;
+    var seoTech = req.body.seoTech;
+    var seoTeach = req.body.seoTeach;
+    var seoSpot = req.body.seoSpot;
+    var seoBook = req.body.seoBook;
     var seo = req.body.seo;
+    // DESC
+    var descGuide = req.body.descGuide;
+    var descTech = req.body.descTech;
+    var descTeach = req.body.descTeach;
+    var descSpot = req.body.descSpot;
+    var descBook = req.body.descBook;
     var desc = req.body.desc;
+    // DATE
+    var dateGuide = req.body.dateGuide;
+    var dateBook = req.body.dateBook;
+    var dateTech = req.body.dateTech;
+    var dateTeach = req.body.dateTeach;
+    var dateSpot = req.body.dateSpot;
     var date = req.body.date;
-    var content = req.body.content;
+    // THUMB
+    var thumbGuide = req.body.thumbGuide;
+    var thumbTech = req.body.thumbTech;
+    var thumbTeach = req.body.thumbTeach;
+    var thumbSpot = req.body.thumbSpot;
+    var thumbBook = req.body.thumbBook;
     var thumb = req.body.thumb;
+    // THUMDESC
+    var thumbdescGuide = req.body.thumbdescGuide;
+    var thumbdescTech = req.body.thumbdescTech;
+    var thumbdescTeach = req.body.thumbdescTeach;
+    var thumbdescSpot = req.body.thumbdescSpot;
+    var thumbdescBook = req.body.thumbdescBook;
+    var thumbdesc = req.body.thumbdesc;
+    // BANNERDESC
+    var bannerdescGuide = req.body.bannerdescGuide;
+    var bannerdescTech = req.body.bannerdescTech;
+    var bannerdescTeach = req.body.bannerdescTeach;
+    var bannerdescSpot = req.body.bannerdescSpot;
+    var bannerdescBook = req.body.bannerdescBook;
+    var bannerdesc = req.body.bannerdesc;
+    // BANNER
+    var bannerGuide = req.body.bannerGuide;
+    var bannerTech = req.body.bannerTech;
+    var bannerTeach = req.body.bannerTeach;
+    var bannerSpot = req.body.bannerSpot;
+    var bannerBook = req.body.bannerBook;
     var banner = req.body.banner;
+    // CONTENT
+    var contentGuide = req.body.contentGuide;
+    var contentTech = req.body.contentTech;
+    var contentTeach = req.body.contentTeach;
+    var contentSpot = req.body.contentSpot;
+    var contentBook = req.body.contentBook;
     var content = req.body.content;
     var newBlog = {
+        // TITLE
         title: title,
-        thsumb: thumb,
+        titleGuide: titleGuide,
+        titleSpot: titleSpot,
+        titleTech: titleTech,
+        titleTeach: titleTeach,
+        titleBook: titleBook,
+        // THUMB
+        thumbGuide: thumbGuide,
+        thumbTech: thumbTech,
+        thumbTeach: thumbTeach,
+        thumbSpot: thumbSpot,
+        thumbBook: thumbBook,
+        thumb: thumb,
+        // THUMBDESC
+        thumbdescGuide: thumbdescGuide,
+        thumbdescTech: thumbdescTech,
+        thumbdescTeach: thumbdescTeach,
+        thumbdescSpot: thumbdescSpot,
+        thumbdesc: thumbdesc,
+        thumbdescBook: thumbdescBook,
+        // BANNERDESC
+        bannerdescGuide: bannerdescGuide,
+        bannerdescTech: bannerdescTech,
+        bannerdescTeach: bannerdescTeach,
+        bannerdescSpot: bannerdescSpot,
+        bannerdesc: bannerdesc,
+        bannerdescBook: bannerdescBook,
+        // BANNER
+        bannerGuide: bannerGuide,
+        bannerTech: bannerTech,
+        bannerTeach: bannerTeach,
+        bannerSpot: bannerSpot,
+        bannerBook: bannerBook,
         banner: banner,
+        //SEO
+        seoGuide: seoGuide,
+        seoTech: seoTech,
+        seoTeach: seoTeach,
+        seoSpot: seoSpot,
+        seoBook: seoBook,
         seo: seo,
+        // DESCGUIDE
+        descGuide: descGuide,
+        descTech: descTech,
+        descTeach: descTeach,
+        descSpot: descSpot,
+        descBook: descBook,
         desc: desc,
+        // DATE
+        dateGuide: dateGuide,
+        dateTech: dateTech,
+        dateTeach: dateTeach,
+        dateSpot: dateSpot,
+        dateBook: dateBook,
         date: date,
+        // CONTENT
+        contentGuide: contentGuide,
+        contentTech: contentTech,
+        contentTeach: contentTeach,
+        contentSpot: contentSpot,
+        contentBook: contentBook,
         content: content,
     };
     // Create a new campground and save to DB
@@ -87,7 +280,7 @@ app.post("/index", function(req, res) {
         }
         else {
             //redirect back to campgrounds page
-            res.redirect("/index");
+            res.redirect("/");
         }
     });
 });
@@ -177,13 +370,14 @@ sitemap({
         '/blog': {},
     },
 }).XMLtoFile();
+
 app.get("/", function(req, res) {
     res.render("index");
 });
 
-// app.get("/15-wetenschappelijl-bewezen-voordelen-meditatie", function(req, res) {
-//     res.render("15");
-// });
+app.get("/15-wetenschappelijk-bewezen-voordelen-meditatie", function(req, res) {
+    res.render("15");
+});
 
 // app.get("/luisteren-naar-de-wereld", function(req, res) {
 //     res.render("luisteren");
@@ -233,9 +427,9 @@ app.get("/", function(req, res) {
 //     res.render("goenka");
 // });
 
-// app.get("/begin", function(req, res) {
-//     res.render("begin");
-// });
+app.get("/begin", function(req, res) {
+    res.render("begin");
+});
 
 // app.get("/mindfulness", function(req, res) {
 //     res.render("mindfulness");
@@ -249,9 +443,9 @@ app.get("/", function(req, res) {
 //     res.render("emoties");
 // });
 
-// app.get("/dagelijkse-meditatie-routine", function(req, res) {
-//     res.render("routine");
-// });
+app.get("/routine", function(req, res) {
+    res.render("routine");
+});
 
 // app.get("/sadhguru", function(req, res) {
 //     res.render("sadhguru");
@@ -302,6 +496,27 @@ app.get("/newblog", function(req, res) {
     res.render("newBlog");
 });
 
+app.get("/newblogguide", function(req, res) {
+    res.render("newBlogGuide");
+});
+
+app.get("/newblogtech", function(req, res) {
+    res.render("newBlogTech");
+});
+
+app.get("/newblogteach", function(req, res) {
+    res.render("newBlogTeach");
+});
+
+app.get("/newblogbook", function(req, res) {
+    res.render("newBlogBook");
+});
+
+app.get("/newblogspotlight", function(req, res) {
+    res.render("newBlogSpot");
+});
+
+
 
 app.post("/register", function(req, res) {
     User.register(new User({ username: req.body.username }), req.body.password, function(err, user) {
@@ -350,6 +565,28 @@ function isLoggedIn(req, res, next) {
 
 }
 
+app.get("/blog/leraren/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, blogID) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("showGuide", { Blog: blogID });
+        }
+    });
+});
+
+app.get("/blog/spotlight/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, blogID) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("showSpot", { Blog: blogID });
+        }
+    });
+});
+
 app.get("/blog/:id", function(req, res) {
     Blog.findById(req.params.id, function(err, blogID) {
         if (err) {
@@ -360,6 +597,8 @@ app.get("/blog/:id", function(req, res) {
         }
     });
 });
+
+
 
 
 

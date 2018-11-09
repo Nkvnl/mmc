@@ -1,0 +1,17 @@
+<div class="container-fluid text-center">
+  <div class="container">
+    <div class="row">
+        <!--START-->
+        <% blogs.forEach(function(Blog){ %>
+        <div class="col-lg-4 p-4" id="blog-div-hide" style="display:none">
+            <!--<a href="/blog/spotlight/">-->
+            <img src="<%=Blog.thumbSpot%>" alt="<%=Blog.seoSpotlight%>"onload="this.parentNode.style.display = 'inline'" class="img-fluid">
+          <h2 class="pt-2"><%=Blog.titleSpot %></h2>
+          <p class="date"><%=Blog.dateSpot%></p>
+          <p class="date"><%=Blog.descSpot%></p>
+        </div>
+        <% }); %>
+        </div>
+        <!--END-->
+      </div>
+  </div>

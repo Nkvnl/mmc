@@ -1,5 +1,7 @@
+@import url("imports/hovereffects.css");
 @import url("imports/carousel.css");
 @import url("imports/blog.css");
+@import url("imports/control.css");
 
 body{
   background: white!important;
@@ -14,6 +16,10 @@ h1{
    font-family: 'Merienda', cursive!important;
 }
 
+.hide{
+  display:none;
+}
+
 .btn{
    font-family: 'Merienda', cursive!important;
 }
@@ -21,10 +27,11 @@ h1{
 h2{
   font-family: 'Josefin Sans', sans-serif;
   font-size:2.5em;
+  color:black;
 }
 .date{
-  font-weight:100;
-  
+  font-weight:300;
+  color:#333;
 }
 
 .navbar{
@@ -64,11 +71,65 @@ h2{
   color:#88bcd2;
 }
 
+.desc{
+  color:#333;
+  font-size:1.2em;
+}
+
 ._123{
   height:100vh;
   
 }
 
-#newblog{
+#spotlight{
+  margin-top:15vh;
+  height:70vh;
+  background-image: url("https://images.pexels.com/photos/459059/pexels-photo-459059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position:top;
+  background-size:cover;
+  -webkit-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
 }
 
+#spotlight-1{
+  margin-top:15vh;
+  height:55vh;
+  background-image: url("https://images.pexels.com/photos/67818/pexels-photo-67818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position:center;
+  background-size:cover;
+  -webkit-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+}
+
+#spotlight-2{
+  margin-top:15vh;
+  height:55vh;
+  background-image: url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position:center;
+  background-size:cover;
+  -webkit-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+  box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
+}
+
+
+@media only screen and (max-width: 600px) {
+  #main{
+    height:50vh!important;
+  }
+}
+
+.objfit{
+ position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  z-index:-10000000000!important;
+}
+
+.footer-brand{
+   font-family: 'Merienda', cursive!important;
+   display:inline;
+}

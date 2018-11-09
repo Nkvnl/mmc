@@ -1,0 +1,19 @@
+<% include partials/header-blog %>
+<title> Meditatie.co | Meditatie is voor iedereen! | Blog </title>
+<% include partials/nav-blog %>
+
+  
+
+<% blogs.forEach(function(Blog){ %>
+<div class="container-fluid" id="main" style="background-image:url(<%=Blog.bannerSpot%>)" alt="<%=Blog.bannerdescSpot%>">
+</div>
+<div class="container-fluid text-center p-5 " id="title">
+  <div class="col-md-6 mx-auto">
+  <h2 class="blog-title"><%=Blog.titleSpot%></h2>
+  <h6 class="date"> &mdash; <%=Blog.dateSpot%></h6>
+  <p class="desc"><%=Blog.descSpot%></p>
+  </div>
+</div>
+<% }); %>
+<% include partials/footer %>
+

@@ -6,3 +6,15 @@
   -moz-box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
   box-shadow: inset 3px -5px 76px -10px rgba(0,0,0,0.75);
 }
+
+#content{
+    font-family: 'Montserrat', sans-serif;
+  font-size:1.2em;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #spotlight{
+    height:30vh!important;
+  }
+}

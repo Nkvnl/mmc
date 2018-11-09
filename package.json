@@ -15,6 +15,7 @@
     "compression": "^1.7.3",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
+    "ejs-lint": "^0.3.0",
     "express": "^4.16.4",
     "express-robots": "^0.1.6",
     "express-robots-txt": "^0.4.0",
@@ -32,6 +33,7 @@
     "passport-local-mongoose": "^5.0.1",
     "popper.js": "^1.14.3",
     "robots": "^0.10.1",
+    "sanitize-html": "^1.19.1",
     "sitemap": "^2.0.1"
   },
   "devDependencies": {},

@@ -5,7 +5,7 @@
  <span id="controlL" class="left-controls  " role="button" aria-label="See Previous Modules">
   </span>
   <i class="fas fa-angle-left"></i>
-    <h5 class="d-inline-block">Recent</h5>
+    <h5 class="d-inline-block">Leraren</h5>
 <i class="fas fa-angle-right"></i>
 
     <span id="controlR" class="right-controls " role="button" aria-label="See Previous Modules">
@@ -24,21 +24,22 @@
    <ul id="content">
      <!--BEGIN-->
              <% blogs.forEach(function(Blog){%>
-        <li class="card effect1" style="display:none"  >
-      <!--  <a href="/blog/<%= Blog._id %>"  >-->
-        <img class="img-fluid" src="<%=Blog.thumb%>" alt="<%=Blog.seo%>"onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
+        <li class="card effect1" style="display:none">
+        <!--<a href="/blog/leraren/<%= Blog._id %>">-->
+        <img class="img-fluid" src="<%=Blog.thumbTeach%>" alt="<%=Blog.seoTeach%>" onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
         <div class="caption-blog">
           <hr>
           <h2>
-            <%= Blog.title %>
+            <%= Blog.titleTeach %>
           </h2>
-          <h5 class="date"> &mdash; <%= Blog.date %></h6>
+          <h5 class="date"> &mdash; <%= Blog.dateTeach %></h6>
           <hr>
         </div>
         </a>
-    </li>
-<% });%>
+      </li>
+            <% });%>
     <!--END-->
+  
    </ul>
    
   </div>
