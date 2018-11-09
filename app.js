@@ -22,7 +22,7 @@ var sanitizeHtml = require('sanitize-html');
 // var seedDB = require("./seeds")
 // seedDB()
 
-mongoose.connect("mongodb://localhost/meditatie");
+mongoose.connect("mongodb://nkvnl:meditatiec0@ds019664.mlab.com:19664/meditatieco");
 app.use(compression());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
