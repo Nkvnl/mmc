@@ -2,9 +2,9 @@
   <div class="container">
         <!--START-->
         <% blogs.forEach(function(Blog){ %>
+        <a href="/blog/technieken/<%= Blog._id%>">
         <div class="row">
         <div class="col-lg-6 p-4" id="blog-div-hide" style="display:none">
-            <!--<a href="/blog/spotlight/">-->
             <img src="<%=Blog.thumbTech%>" onload="this.parentNode.style.display = 'inline'" class="img-fluid">
             </div>
             <div class="col-lg-6">
@@ -13,6 +13,7 @@
           <p class="date"><%=Blog.descTech%></p>
         </div>
         </div>
+        </a>
         <% }); %>
         <!--END-->
       </div>

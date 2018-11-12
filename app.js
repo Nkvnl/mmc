@@ -492,33 +492,33 @@ app.get("/register", function(req, res) {
     res.render("register");
 });
 
-app.get("/newblog", function(req, res) {
+app.get("/newblog", isLoggedIn, function(req, res) {
     res.render("newBlog");
 });
 
-app.get("/newblogguide", function(req, res) {
+app.get("/newblogguide", isLoggedIn, function(req, res) {
     res.render("newBlogGuide");
 });
 
-app.get("/newblogtech", function(req, res) {
+app.get("/newblogtech", isLoggedIn, function(req, res) {
     res.render("newBlogTech");
 });
 
-app.get("/newblogteach", function(req, res) {
+app.get("/newblogteach", isLoggedIn, function(req, res) {
     res.render("newBlogTeach");
 });
 
-app.get("/newblogbook", function(req, res) {
+app.get("/newblogbook", isLoggedIn, function(req, res) {
     res.render("newBlogBook");
 });
 
-app.get("/newblogspotlight", function(req, res) {
+app.get("/newblogspotlight", isLoggedIn, function(req, res) {
     res.render("newBlogSpot");
 });
 
 
 
-app.post("/register", function(req, res) {
+app.post("/register", isLoggedIn, function(req, res) {
     User.register(new User({ username: req.body.username }), req.body.password, function(err, user) {
         if (err) {
             console.log(err);
@@ -530,7 +530,40 @@ app.post("/register", function(req, res) {
     });
 });
 
-app.delete("/index/:id", function(req, res) {
+app.delete("/blog/home/:id", isLoggedIn, function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.redirect("/blog");
+        }
+        else {
+            res.redirect("/blog");
+        }
+    });
+});
+
+app.delete("/leraren/home/:id", isLoggedIn, function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.redirect("/blog");
+        }
+        else {
+            res.redirect("/blog");
+        }
+    });
+});
+
+app.delete("/geleide-meditaties/home/:id", isLoggedIn, function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.redirect("/blog");
+        }
+        else {
+            res.redirect("/blog");
+        }
+    });
+});
+
+app.delete("/technieken/home/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
             res.redirect("/blog");
@@ -565,13 +598,35 @@ function isLoggedIn(req, res, next) {
 
 }
 
-app.get("/blog/leraren/:id", function(req, res) {
+app.get("/blog/technieken/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, blogID) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("showTech", { Blog: blogID });
+        }
+    });
+});
+
+app.get("/blog/geleide-meditaties/:id", function(req, res) {
     Blog.findById(req.params.id, function(err, blogID) {
         if (err) {
             console.log(err);
         }
         else {
             res.render("showGuide", { Blog: blogID });
+        }
+    });
+});
+
+app.get("/blog/leraren/:id", function(req, res) {
+    Blog.findById(req.params.id, function(err, blogID) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("showTeach", { Blog: blogID });
         }
     });
 });

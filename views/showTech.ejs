@@ -1,16 +1,16 @@
-<% include partials/header-blog %>
-<title> Meditatie.co | <%= Blog.title %></title>
-<% include partials/nav-blog %>
+<% include partials/header-blog-show %>
+<title> Meditatie.co | <%= Blog.titleTech %></title>
+<% include partials/nav-blog-show %>
 <div class="container-fluid" id="blog-main" style="
-  background:url('<%=Blog.banner%>');
+  background:url('<%=Blog.bannerTech%>');
 ; background-size:cover;">
 ">
 </div>
 <div class="col-md-6 text-center mx-auto pt-5">
-  <h2 class="blog-title"><%=Blog.title%></h2>
-  <h6 class="date"> &mdash; <%=Blog.date%></h6>
+  <h2 class="blog-title"><%=Blog.titleTech%></h2>
+  <h6 class="date"> &mdash; <%=Blog.dateTech%></h6>
 </div>
 <div class="col-md-8 mx-auto pt-5">
-  <p style="white-space: pre-line" id="content"><%=Blog.content%></p>
+  <p style="white-space: pre-line" id="content"><%=Blog.contentTech%></p>
 </div>
 <% include partials/footer %>

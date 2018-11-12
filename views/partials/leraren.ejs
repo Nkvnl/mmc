@@ -24,8 +24,8 @@
    <ul id="content">
      <!--BEGIN-->
              <% blogs.forEach(function(Blog){%>
+        <a href="/blog/leraren/<%= Blog._id %>">
         <li class="card effect1" style="display:none">
-        <!--<a href="/blog/leraren/<%= Blog._id %>">-->
         <img class="img-fluid" src="<%=Blog.thumbTeach%>" alt="<%=Blog.seoTeach%>" onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
         <div class="caption-blog">
           <hr>
@@ -35,8 +35,8 @@
           <h5 class="date"> &mdash; <%= Blog.dateTeach %></h6>
           <hr>
         </div>
-        </a>
       </li>
+        </a>
             <% });%>
     <!--END-->
   

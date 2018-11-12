@@ -121,6 +121,11 @@ h2{
   }
 }
 
+.guideCont{
+  height:100vh!important;
+  width:100vw!important;
+}
+
 .objfit{
  position: relative;
     top: 0;
@@ -133,3 +138,4 @@ h2{
    font-family: 'Merienda', cursive!important;
    display:inline;
 }
+

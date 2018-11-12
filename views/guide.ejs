@@ -5,13 +5,14 @@
   <div class="container">
     <div class="row">
         <% blogs.forEach(function(Blog){ %>
+            <a href="/blog/Geleide-meditaties/<%=Blog._id%>">
         <div class="col-lg-4 p-4" id="blog-div-hide" style="display:none">
-            <!--<a href="/blog/Guidelight/">-->
             <img src="<%=Blog.thumbGuide%>" onload="this.parentNode.style.display = 'inline'" class="img-fluid">
             <h2 class="pt-2"><%=Blog.titleGuide %></h2>
             <p class="date"><%=Blog.dateGuide%></p>
             <p class="date"><%=Blog.descGuide%></p>
         </div>
+        </a>
         <% }); %>
       </div>
   </div>

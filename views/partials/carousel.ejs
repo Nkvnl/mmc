@@ -1,5 +1,3 @@
-
-
 <div class=" blog-top text-center">
        <span  aria-label="See Previous Modules">
  <span id="controlL" class="left-controls  " role="button" aria-label="See Previous Modules">
@@ -7,41 +5,32 @@
   <i class="fas fa-angle-left"></i>
     <h5 class="d-inline-block">Recent</h5>
 <i class="fas fa-angle-right"></i>
-
     <span id="controlR" class="right-controls " role="button" aria-label="See Previous Modules">
   </span>
-  
 </div>
-
-
 <div id="wrapper" class="container-fluid p-0" >
-  
-
-  
   <div class="title text-center h1"> </div>
- 
-  <div class="module-section clearfix">
-   <ul id="content">
+    <div class="module-section clearfix">
+        <ul id="content">
      <!--BEGIN-->
-             <% blogs.forEach(function(Blog){%>
-        <li class="card effect1" style="display:none"  >
-      <!--  <a href="/blog/<%= Blog._id %>"  >-->
-        <img class="img-fluid" src="<%=Blog.thumb%>" alt="<%=Blog.seo%>"onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
-        <div class="caption-blog">
-          <hr>
-          <h2>
-            <%= Blog.title %>
-          </h2>
-          <h5 class="date"> &mdash; <%= Blog.date %></h6>
-          <hr>
-        </div>
-        </a>
-    </li>
-<% });%>
+        <% blogs.forEach(function(Blog){%>
+        <a href="/blog/<%= Blog._id %>"  >
+            <li class="card effect1" style="display:none"  >
+                <img class="img-fluid" src="<%=Blog.thumb%>" alt="<%=Blog.seo%>"onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
+                    <div class="caption-blog">
+                        <hr>
+                        <h2>
+                            <%= Blog.title %>
+                        </h2>
+                        <h5 class="date"> &mdash; <%= Blog.date %></h6>
+                        <hr>
+                    </div>
+                </li>
+            </a>
+        <% });%>
     <!--END-->
-   </ul>
-   
-  </div>
+    </ul>
+</div>
 <div class="d-block blog-top text-center">
 </div>
 </div>
