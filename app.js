@@ -488,7 +488,7 @@ app.get("/dashboard", isLoggedIn, function(req, res) {
     res.render("dashboard");
 });
 
-app.get("/register", function(req, res) {
+app.get("/register", isLoggedIn, function(req, res) {
     res.render("register");
 });
 
@@ -531,6 +531,17 @@ app.post("/register", isLoggedIn, function(req, res) {
 });
 
 app.delete("/blog/home/:id", isLoggedIn, function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.redirect("/blog");
+        }
+        else {
+            res.redirect("/blog");
+        }
+    });
+});
+
+app.delete("/blog/spotlight/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
             res.redirect("/blog");
