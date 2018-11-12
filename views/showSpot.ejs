@@ -12,8 +12,12 @@
 </div>
 <div class="col-md-8 mx-auto pt-5">
   <p style="white-space: pre-line" id="content"><%=Blog.contentSpot%></p>
-</div>
-<form action="/blog/spotlight/<%=Blog._id%>?_method=DELETE" method="POST">
-  <button class="btn btn-outline-danger">Verwijderen</button>
-</form>
+<!--  <div class="mt-5">-->
+<!--<form class="delete-edit" action="/blog/spotlight/<%=Blog._id%>?_method=DELETE" method="POST">-->
+<!--  <button class="btn btn-danger">Verwijderen</button>-->
+<!--</form>-->
+<!--  <a class="btn btn-warning" href="blog/spotlight/<%Blog._id%>/edit">Bewerken</a>-->
+<!--</div>-->
+<!--</div>-->
+
 <% include partials/footer %>

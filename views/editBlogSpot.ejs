@@ -1,0 +1,43 @@
+<% include partials/header %>
+<title> Meditatie.co | Meditatie is voor iedereen! </title>
+<% include partials/nav %>
+<div class="container-fluid p-0 text-dark" id="login">
+    <h1 class="p-5 mt-5 text-center">Nieuwe post toevoegen aan Boeken</h1>
+    <hr>
+ <form action="/" method="POST">
+ <div class="container-fluid m-0 row p-5" id="form newblog">
+     <div class="col-lg-6">
+    <div class="form-group">
+    <label for="exampleFormControlInput1">Titel voor pagina</label>
+    <input type="text" class="form-control f1" name="titleSpot" id="exampleFormControlInput1" value="<%=Blog.titleSpot%>">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Beschrijving</label>
+    <input type="text" class="form-control f1" name="descSpot" id="exampleFormControlInput1" value="<%=Blog.descSpot%>">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Datum</label>
+    <input type="text" class="form-control f1" name="dateSpot" id="exampleFormControlInput1" value="<%=Blog.dateSpot%>">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Thumbnail (350px +)</label>
+    <input type="text" class="form-control f1" name="thumbSpot" id="exampleFormControlInput1" value="<%=Blog.thumbSpot%>">
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Video</label>
+    <input type="text" class="form-control f1" name="bannerSpot" id="exampleFormControlInput1" value="<%=Blog.bannerSpot%>">
+  </div>
+  </div>
+  <div class="col-md-6">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"><%=Blog.contentSpot%></label>
+    <textarea class="form-control" name="contentSpot" id="exampleFormControlTextarea1" rows="7.5" placeholder=""></textarea>
+  </div>
+    <button class=" btn btn-outline-dark m-auto" type="submit" >Posten! &rarr;</button>
+    </div>
+    
+    </div>
+        </form>
+</div>
+
+<% include partials/footer %>    

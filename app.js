@@ -530,24 +530,84 @@ app.post("/register", isLoggedIn, function(req, res) {
     });
 });
 
-app.delete("/blog/home/:id", isLoggedIn, function(req, res) {
-    Blog.findByIdAndRemove(req.params.id, function(err) {
+app.get("/blog/home/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
         if (err) {
-            res.redirect("/blog");
+            res.redirect("/blogs");
         }
         else {
-            res.redirect("/blog");
+            res.render("editBlog", { blog: foundBlog })
+        }
+    })
+})
+
+app.get("/blog/spotlight/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        }
+        else {
+            res.render("editBlogSpot", { Blog: foundBlog })
+        }
+    })
+})
+
+app.get("/leraren/home/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        }
+        else {
+            res.render("editBlogTeach", { blog: foundBlog })
+        }
+    })
+})
+
+app.get("/technieken/home/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        }
+        else {
+            res.render("editBlogTech", { blog: foundBlog })
+        }
+    })
+})
+
+app.get("/geleide-meditaties/home/:id/edit", function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        }
+        else {
+            res.render("editBlogGuide", { blog: foundBlog });
         }
     });
 });
 
-app.delete("/blog/spotlight/:id", isLoggedIn, function(req, res) {
+app.put("/blog/spotlight/:id", function(req, res) {
+    res.send("UPDATE!");
+});
+
+
+app.delete("/blog/home/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
-            res.redirect("/blog");
+            res.redirect("/");
         }
         else {
-            res.redirect("/blog");
+            res.redirect("/");
+        }
+    });
+});
+
+app.delete("/blog/spotlight/:id", function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.redirect("/");
+        }
+        else {
+            res.redirect("/");
         }
     });
 });
@@ -555,10 +615,10 @@ app.delete("/blog/spotlight/:id", isLoggedIn, function(req, res) {
 app.delete("/leraren/home/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
-            res.redirect("/blog");
+            res.redirect("/");
         }
         else {
-            res.redirect("/blog");
+            res.redirect("/");
         }
     });
 });
@@ -566,10 +626,10 @@ app.delete("/leraren/home/:id", isLoggedIn, function(req, res) {
 app.delete("/geleide-meditaties/home/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
-            res.redirect("/blog");
+            res.redirect("/");
         }
         else {
-            res.redirect("/blog");
+            res.redirect("/");
         }
     });
 });
@@ -577,10 +637,10 @@ app.delete("/geleide-meditaties/home/:id", isLoggedIn, function(req, res) {
 app.delete("/technieken/home/:id", isLoggedIn, function(req, res) {
     Blog.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
-            res.redirect("/blog");
+            res.redirect("/");
         }
         else {
-            res.redirect("/blog");
+            res.redirect("/");
         }
     });
 });

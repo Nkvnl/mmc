@@ -21,7 +21,10 @@ h1{
 }
 
 .btn{
-   font-family: 'Merienda', cursive!important;
+  border-radius:0;
+  font-weight:300;
+  color:#333;
+   /*font-family: 'Josefin Sans', cursive!important;*/
 }
 
 h2{
@@ -132,6 +135,10 @@ h2{
     left: 0;
     width: 100%;
   z-index:-10000000000!important;
+}
+
+.delete-edit{
+  display:inline;
 }
 
 .footer-brand{
