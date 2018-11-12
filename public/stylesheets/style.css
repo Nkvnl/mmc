@@ -32,6 +32,10 @@ h1, h2{
   font-size:2.5em;
   color:black;
 }
+
+.blog-title-r{
+  font-size:3em!important;
+}
 .date{
   font-weight:300;
   color:#333;
@@ -127,6 +131,14 @@ h1, h2{
 .guideCont{
   height:100vh!important;
   width:100vw!important;
+}
+
+.fa-play{
+  color:white;
+  position:absolute;
+  top:50px;
+  left:115px;
+  text-shadow:1px 3px 3px rgba(0,0,0,.5);
 }
 
 .objfit{

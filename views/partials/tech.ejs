@@ -1,20 +1,18 @@
 <div class="container-fluid text-center">
   <div class="container">
+    <div class="row">
         <!--START-->
         <% blogs.forEach(function(Blog){ %>
-        <a href="/blog/technieken/<%= Blog._id%>">
-        <div class="row">
-        <div class="col-lg-6 p-4" id="blog-div-hide" style="display:none">
-            <img src="<%=Blog.thumbTech%>" onload="this.parentNode.style.display = 'inline'" class="img-fluid">
-            </div>
-            <div class="col-lg-6">
+          <a href="/blog/technieken/<%= Blog._id %>" class="col-lg-4 p-4" id="blog-div-hide" style="display:none">
+            <img src="<%=Blog.thumbTech%>" alt="<%=Blog.seoTech%>"onload="this.parentNode.style.display = 'inline'" class="img-fluid">
           <h2 class="pt-2"><%=Blog.titleTech %></h2>
           <p class="date"><%=Blog.dateTech%></p>
           <p class="date"><%=Blog.descTech%></p>
-        </div>
-        </div>
+          </a>
+        <!--</div>-->
         </a>
         <% }); %>
         <!--END-->
       </div>
-  </div>
+    </div>
+</div>

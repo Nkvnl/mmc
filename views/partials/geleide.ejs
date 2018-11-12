@@ -17,14 +17,13 @@
         <a href="/blog/geleide-meditaties/<%= Blog._id %>"  >
         <li class="card effect1" style="display:none"  >
         <img class="img-fluid" src="<%=Blog.thumbGuide%>" alt="<%=Blog.seoGuide%>" onload="this.parentNode.style.display = 'inline'" alt="wetenschappelijk bewezen voordelen meditatie">
+        <i class="fas fa-play"></i>
         <div class="caption-blog">
-          <hr>
-          <h2>
+          <h2 class="blog-title-r">
             <%= Blog.titleGuide %>
           </h2>
           <h5 class="date"> &mdash; <%= Blog.dateGuide %></h6>
-          <hp class="desc text-dark"> &mdash; <%= Blog.descGuide %></h6>
-          <hr>
+          <!--<hp class="desc text-dark"> &mdash; <%= Blog.descGuide %></h6>-->
         </div>
         </li>
         </a>
