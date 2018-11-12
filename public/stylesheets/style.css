@@ -12,9 +12,9 @@ body{
   overflow-x: hidden!important; 
 }
 
-h1{
-   font-family: 'Merienda', cursive!important;
-}
+/*h1{*/
+/*   font-family: 'Merienda', cursive!important;*/
+/*}*/
 
 .hide{
   display:none;
@@ -27,7 +27,7 @@ h1{
    /*font-family: 'Josefin Sans', cursive!important;*/
 }
 
-h2{
+h1, h2{
   font-family: 'Josefin Sans', sans-serif;
   font-size:2.5em;
   color:black;
