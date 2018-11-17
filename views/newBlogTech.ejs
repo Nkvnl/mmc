@@ -1,8 +1,8 @@
 <% include partials/header %>
   Blog over mediteren voor iedereen | Meditatie is voor iedereen! </title>
 <% include partials/nav %>
-<div class="container-fluid p-0 text-dark" id="login">
-    <h1 class="p-5 mt-5 text-center">Nieuwe post toevoegen aan Technieken</h1>
+<<div class="container-fluid p-0 text-dark" id="login">
+    <h1 class="p-5 mt-5 text-center">Nieuwe post toevoegen aan Spotlight</h1>
     <hr>
  <form action="/" method="POST">
  <div class="container-fluid m-0 row p-5" id="form newblog">
@@ -23,13 +23,25 @@
     <label for="exampleFormControlInput1">Datum</label>
     <input type="text" class="form-control f1" name="dateTech" id="exampleFormControlInput1" placeholder="">
   </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">FLoat</label>
+    <input type="text" class="form-control f1" name="img1Tech" id="exampleFormControlInput1" placeholder="">
+  </div>
    <div class="form-group">
-    <label for="exampleFormControlInput1">Thumbnail (350px +)</label>
+    <label for="exampleFormControlInput1">Thumbnail</label>
     <input type="text" class="form-control f1" name="thumbTech" id="exampleFormControlInput1" placeholder="">
   </div>
      <div class="form-group">
-    <label for="exampleFormControlInput1">Banner (1280px +)</label>
+    <label for="exampleFormControlInput1">Banner</label>
     <input type="text" class="form-control f1" name="bannerTech" id="exampleFormControlInput1" placeholder="">
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Bron</label>
+    <input type="text" class="form-control f1" name="link1Tech" id="exampleFormControlInput1" placeholder="">
+  </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1">Bron</label>
+    <input type="text" class="form-control f1" name="link2Tech" id="exampleFormControlInput1" placeholder="">
   </div>
   </div>
   <div class="col-md-6">
@@ -41,7 +53,5 @@
     </div>
     
     </div>
-        </form>
-</div>
 
 <% include partials/footer %>    

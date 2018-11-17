@@ -152,6 +152,21 @@ app.post("/", function(req, res) {
     var titleTeach = req.body.titleTeach;
     var titleTech = req.body.titleTech;
     var titleBook = req.body.titleBook;
+    //LINKS
+    var link1 = req.body.link1
+    var link1Spot = req.body.link1Spot
+    var link1Teach = req.body.link1Teach
+    var link1Tech = req.body.link1Tech
+    //LINKS2
+    var link2 = req.body.link2
+    var link2Spot = req.body.link2Spot
+    var link2Teach = req.body.link2Teach
+    var link2Tech = req.body.link2Tech
+    //SECONDARY IMAGE
+    var img2 = req.body.img2
+    var img2Spot = req.body.img2Spot
+    var img2Teach = req.body.img2Teach
+    var img2Tech = req.body.img2Tech
     // SEO
     var seoGuide = req.body.seoGuide;
     var seoTech = req.body.seoTech;
@@ -216,6 +231,16 @@ app.post("/", function(req, res) {
         titleTech: titleTech,
         titleTeach: titleTeach,
         titleBook: titleBook,
+        //LINKS
+        link1: link1,
+        link1Spot: link1Spot,
+        link1Tech: link1Tech,
+        link1Teach: link1Teach,
+        //LINKS
+        link2: link2,
+        link2Spot: link2Spot,
+        link2Tech: link2Tech,
+        link2Teach: link2Teach,
         // THUMB
         thumbGuide: thumbGuide,
         thumbTech: thumbTech,

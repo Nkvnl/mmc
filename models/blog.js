@@ -9,6 +9,21 @@ var Blog = new mongoose.Schema({
     titleTeach: String,
     titleSpot: String,
     title: String,
+    //LINK
+    link1: String,
+    link1Spot: String,
+    link1Teach: String,
+    link1Tech: String,
+    //LINk2
+    link2: String,
+    link2Spot: String,
+    link2Teach: String,
+    link2Tech: String,
+    //Secondary image
+    img2: String,
+    img2Spot: String,
+    img2Teach: String,
+    img2Tech: String,
     // SEO
     seoGuide: String,
     seoBook: String,
