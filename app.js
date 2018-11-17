@@ -241,6 +241,11 @@ app.post("/", function(req, res) {
         link2Spot: link2Spot,
         link2Tech: link2Tech,
         link2Teach: link2Teach,
+        //IMG2
+        img2: img2,
+        img2Spot: img2Spot,
+        img2Tech: img2Tech,
+        img2Teach: img2Teach,
         // THUMB
         thumbGuide: thumbGuide,
         thumbTech: thumbTech,
