@@ -22,6 +22,7 @@ var sanitizeHtml = require('sanitize-html');
 // var seedDB = require("./seeds")
 // seedDB()
 
+app.set('port', (process.env.PORT || 3000))
 mongoose.connect("mongodb://myme:myme98@ds133353.mlab.com:33353/mymeditations");
 app.use(compression());
 app.set("view engine", "ejs");
@@ -758,11 +759,6 @@ app.get("/blog/:id", function(req, res) {
 
 
 
-// app.get('/robots.txt', function(req, res) {
-//     res.type('text/plain');
-//     res.send("User-agent: *\nDisallow: /");
-// });
-
-app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
-    console.log("Passier server starting...");
+app.listen(app.get('port'), function() {
+    console.log('starting');
 });
